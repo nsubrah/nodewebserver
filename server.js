@@ -34,6 +34,13 @@ app.get('/about',(request,response)=>{
   });
 });
 
+
+app.get('/projects',(request,response) =>{
+  response.render('projects.hbs',{
+    welcomeTitle: 'Projects Page'
+  });
+});
+
 app.get('/bad',(request,response)=>{
   response.send({
     errorMessage: 'Unable to serve the Request!!!'
